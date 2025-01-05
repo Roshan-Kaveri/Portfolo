@@ -8,9 +8,17 @@ module.exports = {
       fontFamily: {
         // Add your custom font
       },
+      keyframes: {
+        gradient: {
+          "0%": { backgroundPosition: "200% 0" },
+          "50%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+      },
+      animation: {
+        gradient: "gradient 12s ease infinite",
+      },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-  ],
+  plugins: [require("tailwindcss-animate")],
 };

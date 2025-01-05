@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 
 export default function NavigationBar({ activeElement }) {
   return (
-    <div className="flex justify-between items-center px-24 py-8 bg-transparent z-10">
-      <div className="flex">
+    <div className="flex justify-between items-center px-24 py-8 bg-transparent z-10 ">
+      <div className='flex justify-between items-center grow hover:border hover:border-[#292929] p-2 px-6 rounded-full'>
+      <div className="flex bg-slate">
         {/* Replace with your logo image or text */}
         <h1 className='text-2xl  engagement-regular text-[#5272b8]'>R</h1>
         <h1 className='text-2xl  engagement-regular text-slate-300'>K</h1>
@@ -17,6 +18,7 @@ export default function NavigationBar({ activeElement }) {
         <Link to="/projects" className={`text-lg px-1 hover:underline ${activeElement === 'Projects' ? 'active' : ''}`}>Projects</Link>
         <Link to="/experience" className={`text-lg px-1 hover:underline ${activeElement === 'Experience' ? 'active' : ''}`}>Experience</Link>
         <ResumeDownload></ResumeDownload>
+      </div>
       </div>
     </div>
   )
